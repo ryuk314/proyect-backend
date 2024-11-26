@@ -7,3 +7,16 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+ribbon:
+  connectTimeout: 3000
+  readtimeout: 10000
+Hystrix:
+  commnad:
+    defaut:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
